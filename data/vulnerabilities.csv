@@ -1,0 +1,351 @@
+vulnerability_id,scan_date,tool,application,severity,vulnerability_name,status,resolved_date
+SYN-VULN-0008,2026-03-01,Solis DAST,CedarBridge Payments API,High,Session fixation vulnerability,Resolved,2026-03-12
+SYN-VULN-0015,2026-03-01,Corona SCA,OrchidBay Employee Workspace,Medium,Regular expression denial of service in parser,Resolved,2026-03-20
+SYN-VULN-0018,2026-03-02,Solis DAST,OrchidBay Employee Workspace,Medium,Overly permissive CORS policy,Resolved,2026-03-21
+SYN-VULN-0011,2026-03-03,QWIET-SAST,EmberHarbor Identity Service,Low,Overly broad error message,Resolved,2026-04-05
+SYN-VULN-0030,2026-03-07,QWIET-SAST,AsterVale Customer Portal,High,Path traversal in file export,Resolved,2026-03-21
+SYN-VULN-0007,2026-03-10,QWIET-SECRETS,AsterVale Customer Portal,Low,Inactive sandbox token in example file,Resolved,2026-03-24
+SYN-VULN-0009,2026-03-10,QWIET-SAST,EmberHarbor Identity Service,High,Path traversal in file export,Resolved,2026-04-20
+SYN-VULN-0031,2026-03-11,Tenable,JuniperPeak Inventory Hub,Medium,Unnecessary network service exposed,In Progress,
+SYN-VULN-0024,2026-03-12,Tenable,AsterVale Customer Portal,Medium,Unnecessary network service exposed,In Progress,
+SYN-VULN-0014,2026-03-13,Corona SCA,CedarBridge Payments API,Critical,Unsafe deserialization in serialization library,Resolved,2026-05-04
+SYN-VULN-0010,2026-03-14,Tenable,JuniperPeak Inventory Hub,Low,ICMP timestamp disclosure,Open,
+SYN-VULN-0021,2026-03-14,Corona SCA,OrchidBay Employee Workspace,Low,Low-impact debug disclosure in dependency,Open,
+SYN-VULN-0025,2026-03-14,QWIET-SAST,EmberHarbor Identity Service,Low,Internal path exposed in logs,Resolved,2026-04-19
+SYN-VULN-0001,2026-03-16,QWIET-SECRETS,CedarBridge Payments API,High,Database password in build script,Open,
+SYN-VULN-0003,2026-03-16,Corona SCA,AsterVale Customer Portal,Critical,Unsafe deserialization in serialization library,Resolved,2026-03-31
+SYN-VULN-0016,2026-03-18,Tenable,JuniperPeak Inventory Hub,Critical,Exposed unauthenticated management service,Resolved,2026-04-15
+SYN-VULN-0023,2026-03-19,Solis DAST,EmberHarbor Identity Service,High,Session fixation vulnerability,Resolved,2026-03-23
+SYN-VULN-0013,2026-03-20,QWIET-SECRETS,SilverKite Order Service,Medium,Expired service token in test fixture,In Progress,
+SYN-VULN-0027,2026-03-20,Tenable,JuniperPeak Inventory Hub,Medium,Unnecessary network service exposed,Resolved,2026-04-24
+SYN-VULN-0019,2026-03-21,QWIET-SAST,SilverKite Order Service,Low,Internal path exposed in logs,Resolved,2026-04-21
+SYN-VULN-0034,2026-03-21,Tenable,AsterVale Customer Portal,High,Outdated SSH server package,Resolved,2026-03-23
+SYN-VULN-0033,2026-03-22,Corona SCA,EmberHarbor Identity Service,Medium,Information disclosure in archive dependency,Resolved,2026-05-16
+SYN-VULN-0002,2026-03-23,QWIET-SAST,WillowForge Document Exchange,Low,Internal path exposed in logs,Resolved,2026-04-05
+SYN-VULN-0005,2026-03-23,QWIET-SECRETS,SilverKite Order Service,Medium,Expired service token in test fixture,In Progress,
+SYN-VULN-0006,2026-03-23,QWIET-SAST,CedarBridge Payments API,Medium,Verbose exception disclosure,Resolved,2026-04-22
+SYN-VULN-0012,2026-03-23,Corona SCA,OrchidBay Employee Workspace,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0020,2026-03-24,QWIET-SECRETS,CedarBridge Payments API,Low,Test-only credential in documentation,Resolved,2026-04-28
+SYN-VULN-0022,2026-03-25,Solis DAST,EmberHarbor Identity Service,Medium,Missing cross-site request forgery protection,Resolved,2026-05-06
+SYN-VULN-0017,2026-03-26,Corona SCA,CedarBridge Payments API,Critical,Unsafe deserialization in serialization library,Resolved,2026-05-11
+SYN-VULN-0028,2026-03-27,QWIET-SAST,EmberHarbor Identity Service,Low,Internal path exposed in logs,Resolved,2026-03-28
+SYN-VULN-0035,2026-03-27,QWIET-SECRETS,CedarBridge Payments API,High,Service API token in source,Resolved,2026-05-25
+SYN-VULN-0029,2026-03-28,Tenable,WillowForge Document Exchange,Medium,Unnecessary network service exposed,Resolved,2026-04-02
+SYN-VULN-0032,2026-03-28,QWIET-SAST,EmberHarbor Identity Service,Medium,Verbose exception disclosure,Resolved,2026-04-12
+SYN-VULN-0004,2026-03-29,Corona SCA,AsterVale Customer Portal,Medium,Information disclosure in archive dependency,In Progress,
+SYN-VULN-0026,2026-03-29,Solis DAST,AsterVale Customer Portal,Low,Missing Content-Security-Policy header,Resolved,2026-05-22
+SYN-VULN-0040,2026-04-01,Corona SCA,CedarBridge Payments API,Low,Temporary file exposure in utility dependency,Resolved,2026-04-06
+SYN-VULN-0053,2026-04-01,QWIET-SAST,JuniperPeak Inventory Hub,Critical,Unsafe object deserialization,Resolved,2026-04-10
+SYN-VULN-0066,2026-04-01,QWIET-SECRETS,LumenField Analytics Gateway,High,Database password in build script,Open,
+SYN-VULN-0045,2026-04-03,Solis DAST,OrchidBay Employee Workspace,Low,Missing X-Content-Type-Options header,Resolved,2026-04-08
+SYN-VULN-0048,2026-04-03,Tenable,EmberHarbor Identity Service,Low,ICMP timestamp disclosure,Resolved,2026-05-06
+SYN-VULN-0074,2026-04-03,Solis DAST,SilverKite Order Service,Medium,Missing cross-site request forgery protection,Resolved,2026-04-12
+SYN-VULN-0073,2026-04-04,Tenable,AsterVale Customer Portal,Low,ICMP timestamp disclosure,Resolved,2026-04-11
+SYN-VULN-0046,2026-04-06,Corona SCA,OrchidBay Employee Workspace,Low,Temporary file exposure in utility dependency,Resolved,2026-06-05
+SYN-VULN-0064,2026-04-07,QWIET-SECRETS,AsterVale Customer Portal,Low,Test-only credential in documentation,Resolved,2026-05-26
+SYN-VULN-0055,2026-04-09,Tenable,AsterVale Customer Portal,High,Outdated SSH server package,Resolved,2026-05-20
+SYN-VULN-0061,2026-04-09,Tenable,SilverKite Order Service,High,Unsupported operating system release,In Progress,
+SYN-VULN-0042,2026-04-12,Corona SCA,EmberHarbor Identity Service,Low,Low-impact debug disclosure in dependency,Resolved,2026-04-20
+SYN-VULN-0044,2026-04-12,Tenable,CedarBridge Payments API,Medium,Legacy TLS protocol enabled,In Progress,
+SYN-VULN-0036,2026-04-14,QWIET-SECRETS,CedarBridge Payments API,Medium,Development credential in configuration,Resolved,2026-05-23
+SYN-VULN-0050,2026-04-15,QWIET-SAST,CedarBridge Payments API,Medium,Verbose exception disclosure,Resolved,2026-05-02
+SYN-VULN-0062,2026-04-16,QWIET-SAST,AsterVale Customer Portal,High,Stored cross-site scripting,In Progress,
+SYN-VULN-0043,2026-04-17,QWIET-SECRETS,WillowForge Document Exchange,High,Service API token in source,Resolved,2026-05-31
+SYN-VULN-0060,2026-04-18,Solis DAST,AsterVale Customer Portal,High,Session fixation vulnerability,Resolved,2026-04-19
+SYN-VULN-0038,2026-04-19,Tenable,EmberHarbor Identity Service,Medium,Legacy TLS protocol enabled,Resolved,2026-05-09
+SYN-VULN-0051,2026-04-19,Corona SCA,AsterVale Customer Portal,High,Signature verification bypass in token library,Open,
+SYN-VULN-0067,2026-04-19,QWIET-SAST,WillowForge Document Exchange,Medium,Missing authorization check,Resolved,2026-06-07
+SYN-VULN-0070,2026-04-19,QWIET-SAST,SilverKite Order Service,Critical,SQL injection in account search,Resolved,2026-05-11
+SYN-VULN-0075,2026-04-19,Solis DAST,CedarBridge Payments API,Critical,Command injection in report endpoint,Resolved,2026-04-27
+SYN-VULN-0052,2026-04-20,QWIET-SAST,OrchidBay Employee Workspace,Low,Overly broad error message,In Progress,
+SYN-VULN-0058,2026-04-20,Corona SCA,CedarBridge Payments API,Low,Temporary file exposure in utility dependency,Resolved,2026-05-21
+SYN-VULN-0071,2026-04-20,Solis DAST,EmberHarbor Identity Service,Low,Missing Content-Security-Policy header,Resolved,2026-05-29
+SYN-VULN-0047,2026-04-21,QWIET-SAST,LumenField Analytics Gateway,Low,Internal path exposed in logs,Resolved,2026-04-27
+SYN-VULN-0065,2026-04-22,QWIET-SAST,OrchidBay Employee Workspace,High,Path traversal in file export,In Progress,
+SYN-VULN-0056,2026-04-24,Tenable,JuniperPeak Inventory Hub,Medium,Legacy TLS protocol enabled,Open,
+SYN-VULN-0057,2026-04-24,QWIET-SAST,CedarBridge Payments API,Medium,Verbose exception disclosure,Resolved,2026-06-05
+SYN-VULN-0037,2026-04-25,Tenable,CedarBridge Payments API,High,Outdated SSH server package,Resolved,2026-06-02
+SYN-VULN-0049,2026-04-25,Tenable,EmberHarbor Identity Service,Medium,Legacy TLS protocol enabled,Resolved,2026-06-15
+SYN-VULN-0039,2026-04-26,QWIET-SAST,CedarBridge Payments API,Critical,Unsafe object deserialization,Resolved,2026-06-19
+SYN-VULN-0068,2026-04-26,QWIET-SAST,CedarBridge Payments API,Low,Overly broad error message,Resolved,2026-06-09
+SYN-VULN-0041,2026-04-27,Tenable,EmberHarbor Identity Service,High,Unsupported operating system release,Open,
+SYN-VULN-0069,2026-04-28,Solis DAST,JuniperPeak Inventory Hub,Medium,Missing cross-site request forgery protection,Resolved,2026-06-16
+SYN-VULN-0059,2026-04-29,Corona SCA,CedarBridge Payments API,Critical,Remote code execution in logging dependency,Resolved,2026-06-24
+SYN-VULN-0063,2026-04-29,Tenable,EmberHarbor Identity Service,Low,Verbose server version banner,In Progress,
+SYN-VULN-0072,2026-04-29,Solis DAST,EmberHarbor Identity Service,High,Session fixation vulnerability,In Progress,
+SYN-VULN-0054,2026-04-30,Corona SCA,WillowForge Document Exchange,Medium,Information disclosure in archive dependency,Resolved,2026-05-16
+SYN-VULN-0116,2026-05-01,Solis DAST,LumenField Analytics Gateway,Medium,Missing cross-site request forgery protection,Resolved,2026-06-16
+SYN-VULN-0117,2026-05-03,Corona SCA,AsterVale Customer Portal,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0080,2026-05-04,Tenable,AsterVale Customer Portal,Medium,Legacy TLS protocol enabled,Resolved,2026-05-30
+SYN-VULN-0076,2026-05-05,Corona SCA,EmberHarbor Identity Service,Low,Temporary file exposure in utility dependency,Resolved,2026-06-27
+SYN-VULN-0088,2026-05-06,Solis DAST,JuniperPeak Inventory Hub,Critical,Authentication bypass on administration endpoint,Resolved,2026-06-17
+SYN-VULN-0109,2026-05-06,QWIET-SAST,EmberHarbor Identity Service,High,Stored cross-site scripting,In Progress,
+SYN-VULN-0114,2026-05-07,QWIET-SAST,WillowForge Document Exchange,Low,Overly broad error message,In Progress,
+SYN-VULN-0090,2026-05-08,Tenable,AsterVale Customer Portal,Critical,Exposed unauthenticated management service,Resolved,2026-06-12
+SYN-VULN-0098,2026-05-09,Corona SCA,SilverKite Order Service,Medium,Information disclosure in archive dependency,Resolved,2026-06-26
+SYN-VULN-0113,2026-05-09,Corona SCA,AsterVale Customer Portal,Medium,Regular expression denial of service in parser,Resolved,2026-05-24
+SYN-VULN-0115,2026-05-11,Corona SCA,EmberHarbor Identity Service,Medium,Information disclosure in archive dependency,Resolved,2026-06-01
+SYN-VULN-0119,2026-05-11,QWIET-SAST,AsterVale Customer Portal,High,Stored cross-site scripting,Resolved,2026-06-07
+SYN-VULN-0100,2026-05-12,Solis DAST,LumenField Analytics Gateway,High,Server-side request forgery,In Progress,
+SYN-VULN-0105,2026-05-12,Corona SCA,SilverKite Order Service,Medium,Regular expression denial of service in parser,Open,
+SYN-VULN-0085,2026-05-14,Corona SCA,AsterVale Customer Portal,Medium,Regular expression denial of service in parser,Open,
+SYN-VULN-0103,2026-05-14,Corona SCA,AsterVale Customer Portal,Medium,Regular expression denial of service in parser,Resolved,2026-07-12
+SYN-VULN-0104,2026-05-14,Tenable,SilverKite Order Service,Critical,Unpatched remote code execution vulnerability,Open,
+SYN-VULN-0082,2026-05-15,QWIET-SAST,AsterVale Customer Portal,Low,Overly broad error message,Open,
+SYN-VULN-0096,2026-05-15,QWIET-SAST,CedarBridge Payments API,High,Stored cross-site scripting,Resolved,2026-06-09
+SYN-VULN-0120,2026-05-16,Corona SCA,JuniperPeak Inventory Hub,High,Denial of service in HTTP dependency,In Progress,
+SYN-VULN-0083,2026-05-18,QWIET-SAST,CedarBridge Payments API,High,Path traversal in file export,Resolved,2026-07-02
+SYN-VULN-0112,2026-05-18,Solis DAST,AsterVale Customer Portal,Medium,Missing cross-site request forgery protection,In Progress,
+SYN-VULN-0118,2026-05-18,Solis DAST,JuniperPeak Inventory Hub,Critical,Authentication bypass on administration endpoint,Resolved,2026-05-24
+SYN-VULN-0091,2026-05-19,Corona SCA,WillowForge Document Exchange,High,Denial of service in HTTP dependency,Resolved,2026-06-06
+SYN-VULN-0092,2026-05-19,Corona SCA,JuniperPeak Inventory Hub,High,Denial of service in HTTP dependency,Resolved,2026-05-23
+SYN-VULN-0093,2026-05-19,QWIET-SAST,LumenField Analytics Gateway,Medium,Missing authorization check,Resolved,2026-06-20
+SYN-VULN-0107,2026-05-19,Solis DAST,CedarBridge Payments API,Low,Missing Content-Security-Policy header,Open,
+SYN-VULN-0087,2026-05-20,QWIET-SAST,JuniperPeak Inventory Hub,Low,Internal path exposed in logs,Resolved,2026-05-31
+SYN-VULN-0077,2026-05-21,Solis DAST,OrchidBay Employee Workspace,Medium,Missing cross-site request forgery protection,Resolved,2026-05-29
+SYN-VULN-0097,2026-05-21,QWIET-SAST,JuniperPeak Inventory Hub,Medium,Missing authorization check,Resolved,2026-05-31
+SYN-VULN-0111,2026-05-21,QWIET-SAST,AsterVale Customer Portal,Critical,SQL injection in account search,In Progress,
+SYN-VULN-0099,2026-05-22,QWIET-SAST,SilverKite Order Service,Medium,Verbose exception disclosure,Open,
+SYN-VULN-0110,2026-05-22,QWIET-SECRETS,JuniperPeak Inventory Hub,Critical,Production administrator credential in source,In Progress,
+SYN-VULN-0094,2026-05-23,Tenable,WillowForge Document Exchange,Medium,Legacy TLS protocol enabled,In Progress,
+SYN-VULN-0102,2026-05-23,QWIET-SAST,WillowForge Document Exchange,Medium,Missing authorization check,In Progress,
+SYN-VULN-0108,2026-05-23,Corona SCA,AsterVale Customer Portal,High,Signature verification bypass in token library,In Progress,
+SYN-VULN-0101,2026-05-26,QWIET-SECRETS,JuniperPeak Inventory Hub,High,Service API token in source,Resolved,2026-07-02
+SYN-VULN-0079,2026-05-27,Corona SCA,AsterVale Customer Portal,High,Signature verification bypass in token library,Resolved,2026-06-22
+SYN-VULN-0095,2026-05-27,QWIET-SAST,OrchidBay Employee Workspace,Medium,Verbose exception disclosure,Resolved,2026-06-12
+SYN-VULN-0106,2026-05-27,Tenable,SilverKite Order Service,Medium,Legacy TLS protocol enabled,In Progress,
+SYN-VULN-0078,2026-05-28,QWIET-SAST,CedarBridge Payments API,Low,Overly broad error message,Open,
+SYN-VULN-0081,2026-05-28,Solis DAST,CedarBridge Payments API,High,Session fixation vulnerability,Resolved,2026-06-24
+SYN-VULN-0084,2026-05-28,Corona SCA,AsterVale Customer Portal,Low,Temporary file exposure in utility dependency,Open,
+SYN-VULN-0086,2026-05-29,QWIET-SAST,EmberHarbor Identity Service,High,Path traversal in file export,Resolved,2026-06-29
+SYN-VULN-0089,2026-05-31,Tenable,JuniperPeak Inventory Hub,Critical,Exposed unauthenticated management service,Open,
+SYN-VULN-0142,2026-06-01,Corona SCA,AsterVale Customer Portal,Critical,Remote code execution in logging dependency,Resolved,2026-07-11
+SYN-VULN-0158,2026-06-01,QWIET-SECRETS,EmberHarbor Identity Service,Low,Test-only credential in documentation,Resolved,2026-06-18
+SYN-VULN-0160,2026-06-01,QWIET-SAST,AsterVale Customer Portal,Medium,Missing authorization check,Resolved,2026-07-20
+SYN-VULN-0150,2026-06-02,Corona SCA,LumenField Analytics Gateway,Critical,Unsafe deserialization in serialization library,Resolved,2026-07-03
+SYN-VULN-0136,2026-06-03,Solis DAST,OrchidBay Employee Workspace,Critical,Authentication bypass on administration endpoint,Open,
+SYN-VULN-0166,2026-06-04,QWIET-SECRETS,SilverKite Order Service,High,Database password in build script,Resolved,2026-07-25
+SYN-VULN-0121,2026-06-05,Tenable,JuniperPeak Inventory Hub,Critical,Unpatched remote code execution vulnerability,Resolved,2026-07-05
+SYN-VULN-0122,2026-06-05,QWIET-SAST,OrchidBay Employee Workspace,High,Path traversal in file export,Resolved,2026-07-17
+SYN-VULN-0129,2026-06-05,Tenable,CedarBridge Payments API,Medium,Legacy TLS protocol enabled,In Progress,
+SYN-VULN-0130,2026-06-06,Tenable,SilverKite Order Service,High,Outdated SSH server package,Resolved,2026-06-20
+SYN-VULN-0137,2026-06-07,QWIET-SECRETS,AsterVale Customer Portal,Low,Inactive sandbox token in example file,Resolved,2026-06-25
+SYN-VULN-0153,2026-06-07,Corona SCA,JuniperPeak Inventory Hub,Medium,Information disclosure in archive dependency,Resolved,2026-07-15
+SYN-VULN-0123,2026-06-08,Corona SCA,AsterVale Customer Portal,Medium,Regular expression denial of service in parser,Resolved,2026-08-03
+SYN-VULN-0145,2026-06-09,Solis DAST,AsterVale Customer Portal,Low,Missing X-Content-Type-Options header,Resolved,2026-06-19
+SYN-VULN-0146,2026-06-10,QWIET-SECRETS,CedarBridge Payments API,Medium,Development credential in configuration,Resolved,2026-06-22
+SYN-VULN-0157,2026-06-10,QWIET-SECRETS,SilverKite Order Service,High,Database password in build script,Open,
+SYN-VULN-0138,2026-06-11,Corona SCA,JuniperPeak Inventory Hub,Critical,Unsafe deserialization in serialization library,Resolved,2026-08-10
+SYN-VULN-0155,2026-06-11,QWIET-SAST,EmberHarbor Identity Service,Low,Overly broad error message,Resolved,2026-06-28
+SYN-VULN-0147,2026-06-12,Corona SCA,JuniperPeak Inventory Hub,High,Denial of service in HTTP dependency,Open,
+SYN-VULN-0127,2026-06-13,Solis DAST,CedarBridge Payments API,Medium,Missing cross-site request forgery protection,In Progress,
+SYN-VULN-0132,2026-06-13,QWIET-SAST,CedarBridge Payments API,Medium,Verbose exception disclosure,Open,
+SYN-VULN-0165,2026-06-13,QWIET-SAST,SilverKite Order Service,Low,Overly broad error message,Resolved,2026-07-11
+SYN-VULN-0144,2026-06-14,QWIET-SAST,WillowForge Document Exchange,Medium,Verbose exception disclosure,Open,
+SYN-VULN-0126,2026-06-16,QWIET-SECRETS,LumenField Analytics Gateway,Critical,Production administrator credential in source,Open,
+SYN-VULN-0135,2026-06-16,Corona SCA,AsterVale Customer Portal,Low,Low-impact debug disclosure in dependency,Resolved,2026-07-10
+SYN-VULN-0141,2026-06-16,QWIET-SAST,CedarBridge Payments API,Critical,Unsafe object deserialization,Resolved,2026-08-12
+SYN-VULN-0159,2026-06-17,Tenable,EmberHarbor Identity Service,Medium,Unnecessary network service exposed,Resolved,2026-06-23
+SYN-VULN-0161,2026-06-17,Tenable,CedarBridge Payments API,Critical,Unpatched remote code execution vulnerability,Open,
+SYN-VULN-0140,2026-06-18,Corona SCA,JuniperPeak Inventory Hub,Critical,Unsafe deserialization in serialization library,Resolved,2026-08-03
+SYN-VULN-0164,2026-06-18,QWIET-SAST,SilverKite Order Service,Medium,Missing authorization check,Resolved,2026-07-21
+SYN-VULN-0168,2026-06-18,Tenable,AsterVale Customer Portal,Medium,Legacy TLS protocol enabled,Resolved,2026-06-29
+SYN-VULN-0125,2026-06-20,Corona SCA,JuniperPeak Inventory Hub,Medium,Regular expression denial of service in parser,Resolved,2026-07-06
+SYN-VULN-0131,2026-06-20,Solis DAST,WillowForge Document Exchange,Low,Missing Content-Security-Policy header,Open,
+SYN-VULN-0148,2026-06-20,QWIET-SECRETS,CedarBridge Payments API,High,Database password in build script,In Progress,
+SYN-VULN-0124,2026-06-22,Corona SCA,LumenField Analytics Gateway,High,Signature verification bypass in token library,Resolved,2026-06-25
+SYN-VULN-0143,2026-06-22,Solis DAST,EmberHarbor Identity Service,High,Server-side request forgery,Open,
+SYN-VULN-0154,2026-06-22,QWIET-SECRETS,EmberHarbor Identity Service,Medium,Development credential in configuration,Resolved,2026-08-03
+SYN-VULN-0156,2026-06-22,Tenable,WillowForge Document Exchange,Medium,Unnecessary network service exposed,In Progress,
+SYN-VULN-0128,2026-06-23,Tenable,EmberHarbor Identity Service,Critical,Unpatched remote code execution vulnerability,In Progress,
+SYN-VULN-0170,2026-06-24,QWIET-SAST,WillowForge Document Exchange,Critical,Unsafe object deserialization,Resolved,2026-07-16
+SYN-VULN-0149,2026-06-25,Solis DAST,LumenField Analytics Gateway,Medium,Missing cross-site request forgery protection,Resolved,2026-07-13
+SYN-VULN-0133,2026-06-26,Solis DAST,AsterVale Customer Portal,Critical,Command injection in report endpoint,Open,
+SYN-VULN-0163,2026-06-26,Solis DAST,SilverKite Order Service,Critical,Command injection in report endpoint,Open,
+SYN-VULN-0169,2026-06-27,Corona SCA,SilverKite Order Service,Medium,Regular expression denial of service in parser,Open,
+SYN-VULN-0139,2026-06-28,Tenable,AsterVale Customer Portal,Medium,Legacy TLS protocol enabled,Resolved,2026-07-14
+SYN-VULN-0151,2026-06-29,QWIET-SAST,JuniperPeak Inventory Hub,Medium,Missing authorization check,In Progress,
+SYN-VULN-0152,2026-06-29,Corona SCA,CedarBridge Payments API,High,Denial of service in HTTP dependency,Resolved,2026-08-24
+SYN-VULN-0134,2026-06-30,QWIET-SECRETS,LumenField Analytics Gateway,High,Database password in build script,Resolved,2026-08-22
+SYN-VULN-0162,2026-06-30,QWIET-SECRETS,SilverKite Order Service,Critical,Cloud access key in configuration,Resolved,2026-08-26
+SYN-VULN-0167,2026-06-30,Tenable,SilverKite Order Service,Medium,Legacy TLS protocol enabled,Resolved,2026-08-02
+SYN-VULN-0188,2026-07-03,Tenable,OrchidBay Employee Workspace,Low,ICMP timestamp disclosure,Open,
+SYN-VULN-0198,2026-07-03,QWIET-SAST,OrchidBay Employee Workspace,Medium,Missing authorization check,In Progress,
+SYN-VULN-0209,2026-07-03,Corona SCA,LumenField Analytics Gateway,High,Signature verification bypass in token library,Open,
+SYN-VULN-0178,2026-07-04,QWIET-SAST,CedarBridge Payments API,Low,Internal path exposed in logs,Open,
+SYN-VULN-0190,2026-07-04,QWIET-SECRETS,CedarBridge Payments API,Medium,Expired service token in test fixture,In Progress,
+SYN-VULN-0180,2026-07-07,Solis DAST,CedarBridge Payments API,Medium,Overly permissive CORS policy,Resolved,2026-08-07
+SYN-VULN-0220,2026-07-07,Solis DAST,OrchidBay Employee Workspace,High,Session fixation vulnerability,Resolved,2026-08-09
+SYN-VULN-0224,2026-07-07,QWIET-SECRETS,CedarBridge Payments API,Low,Test-only credential in documentation,Open,
+SYN-VULN-0202,2026-07-08,QWIET-SECRETS,WillowForge Document Exchange,Low,Test-only credential in documentation,Resolved,2026-08-30
+SYN-VULN-0173,2026-07-09,Corona SCA,CedarBridge Payments API,Low,Low-impact debug disclosure in dependency,Open,
+SYN-VULN-0174,2026-07-10,QWIET-SECRETS,SilverKite Order Service,Low,Test-only credential in documentation,Open,
+SYN-VULN-0197,2026-07-10,QWIET-SECRETS,LumenField Analytics Gateway,Medium,Expired service token in test fixture,Open,
+SYN-VULN-0214,2026-07-10,Solis DAST,CedarBridge Payments API,High,Server-side request forgery,Resolved,2026-07-18
+SYN-VULN-0181,2026-07-11,QWIET-SAST,AsterVale Customer Portal,Medium,Missing authorization check,Open,
+SYN-VULN-0221,2026-07-11,Solis DAST,LumenField Analytics Gateway,Low,Missing X-Content-Type-Options header,In Progress,
+SYN-VULN-0211,2026-07-12,QWIET-SAST,JuniperPeak Inventory Hub,Low,Overly broad error message,In Progress,
+SYN-VULN-0215,2026-07-13,Tenable,LumenField Analytics Gateway,Medium,Legacy TLS protocol enabled,Open,
+SYN-VULN-0182,2026-07-15,Tenable,AsterVale Customer Portal,Low,Verbose server version banner,Open,
+SYN-VULN-0207,2026-07-15,Tenable,EmberHarbor Identity Service,Medium,Legacy TLS protocol enabled,Open,
+SYN-VULN-0212,2026-07-16,QWIET-SECRETS,OrchidBay Employee Workspace,High,Service API token in source,Resolved,2026-09-10
+SYN-VULN-0179,2026-07-17,Solis DAST,AsterVale Customer Portal,High,Server-side request forgery,Open,
+SYN-VULN-0192,2026-07-17,QWIET-SAST,EmberHarbor Identity Service,High,Stored cross-site scripting,Open,
+SYN-VULN-0200,2026-07-17,Tenable,CedarBridge Payments API,Low,Verbose server version banner,In Progress,
+SYN-VULN-0208,2026-07-17,Tenable,SilverKite Order Service,Medium,Unnecessary network service exposed,In Progress,
+SYN-VULN-0184,2026-07-18,QWIET-SAST,AsterVale Customer Portal,Low,Overly broad error message,Resolved,2026-08-31
+SYN-VULN-0204,2026-07-18,Tenable,CedarBridge Payments API,Medium,Unnecessary network service exposed,In Progress,
+SYN-VULN-0206,2026-07-18,Corona SCA,CedarBridge Payments API,Low,Temporary file exposure in utility dependency,Open,
+SYN-VULN-0216,2026-07-18,Corona SCA,EmberHarbor Identity Service,Medium,Information disclosure in archive dependency,Resolved,2026-08-17
+SYN-VULN-0223,2026-07-18,Solis DAST,EmberHarbor Identity Service,High,Server-side request forgery,Open,
+SYN-VULN-0175,2026-07-20,QWIET-SECRETS,JuniperPeak Inventory Hub,Low,Test-only credential in documentation,Open,
+SYN-VULN-0187,2026-07-20,QWIET-SAST,AsterVale Customer Portal,Low,Internal path exposed in logs,Open,
+SYN-VULN-0194,2026-07-20,Corona SCA,OrchidBay Employee Workspace,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0201,2026-07-20,Solis DAST,CedarBridge Payments API,Medium,Missing cross-site request forgery protection,In Progress,
+SYN-VULN-0177,2026-07-21,Tenable,CedarBridge Payments API,High,Unsupported operating system release,Open,
+SYN-VULN-0218,2026-07-21,QWIET-SAST,LumenField Analytics Gateway,Medium,Missing authorization check,Resolved,2026-08-15
+SYN-VULN-0191,2026-07-22,QWIET-SAST,CedarBridge Payments API,Medium,Verbose exception disclosure,In Progress,
+SYN-VULN-0217,2026-07-22,QWIET-SECRETS,SilverKite Order Service,High,Database password in build script,In Progress,
+SYN-VULN-0222,2026-07-22,Corona SCA,AsterVale Customer Portal,Low,Temporary file exposure in utility dependency,Open,
+SYN-VULN-0195,2026-07-24,QWIET-SECRETS,CedarBridge Payments API,High,Database password in build script,In Progress,
+SYN-VULN-0213,2026-07-24,Solis DAST,JuniperPeak Inventory Hub,Medium,Overly permissive CORS policy,Open,
+SYN-VULN-0183,2026-07-25,Corona SCA,JuniperPeak Inventory Hub,Medium,Regular expression denial of service in parser,Open,
+SYN-VULN-0225,2026-07-25,Solis DAST,CedarBridge Payments API,Low,Missing X-Content-Type-Options header,Open,
+SYN-VULN-0171,2026-07-26,Solis DAST,CedarBridge Payments API,High,Server-side request forgery,In Progress,
+SYN-VULN-0176,2026-07-26,Tenable,AsterVale Customer Portal,High,Outdated SSH server package,In Progress,
+SYN-VULN-0199,2026-07-26,QWIET-SAST,AsterVale Customer Portal,Low,Overly broad error message,Open,
+SYN-VULN-0172,2026-07-27,Tenable,LumenField Analytics Gateway,Low,Verbose server version banner,In Progress,
+SYN-VULN-0186,2026-07-27,Corona SCA,OrchidBay Employee Workspace,Medium,Information disclosure in archive dependency,In Progress,
+SYN-VULN-0205,2026-07-27,Tenable,WillowForge Document Exchange,High,Outdated SSH server package,Open,
+SYN-VULN-0185,2026-07-28,QWIET-SAST,LumenField Analytics Gateway,Low,Internal path exposed in logs,Open,
+SYN-VULN-0189,2026-07-28,QWIET-SAST,CedarBridge Payments API,Low,Internal path exposed in logs,In Progress,
+SYN-VULN-0219,2026-07-28,Tenable,AsterVale Customer Portal,Low,ICMP timestamp disclosure,In Progress,
+SYN-VULN-0193,2026-07-30,Corona SCA,CedarBridge Payments API,High,Denial of service in HTTP dependency,Resolved,2026-09-02
+SYN-VULN-0196,2026-07-31,Solis DAST,EmberHarbor Identity Service,Low,Missing X-Content-Type-Options header,Open,
+SYN-VULN-0203,2026-07-31,QWIET-SAST,EmberHarbor Identity Service,High,Path traversal in file export,Open,
+SYN-VULN-0210,2026-07-31,Solis DAST,JuniperPeak Inventory Hub,Medium,Overly permissive CORS policy,Open,
+SYN-VULN-0250,2026-08-01,QWIET-SAST,JuniperPeak Inventory Hub,Medium,Missing authorization check,Resolved,2026-09-16
+SYN-VULN-0251,2026-08-01,QWIET-SAST,CedarBridge Payments API,Medium,Missing authorization check,Open,
+SYN-VULN-0274,2026-08-01,Corona SCA,WillowForge Document Exchange,Medium,Information disclosure in archive dependency,Resolved,2026-09-03
+SYN-VULN-0262,2026-08-02,Tenable,JuniperPeak Inventory Hub,Low,ICMP timestamp disclosure,Resolved,2026-08-09
+SYN-VULN-0268,2026-08-02,QWIET-SAST,CedarBridge Payments API,High,Stored cross-site scripting,Open,
+SYN-VULN-0235,2026-08-03,Corona SCA,CedarBridge Payments API,Medium,Information disclosure in archive dependency,Resolved,2026-08-10
+SYN-VULN-0236,2026-08-03,QWIET-SAST,JuniperPeak Inventory Hub,Medium,Verbose exception disclosure,Open,
+SYN-VULN-0238,2026-08-03,QWIET-SECRETS,AsterVale Customer Portal,High,Database password in build script,Open,
+SYN-VULN-0239,2026-08-03,Corona SCA,AsterVale Customer Portal,Low,Low-impact debug disclosure in dependency,Open,
+SYN-VULN-0259,2026-08-03,Corona SCA,AsterVale Customer Portal,High,Denial of service in HTTP dependency,In Progress,
+SYN-VULN-0270,2026-08-03,Tenable,WillowForge Document Exchange,Medium,Legacy TLS protocol enabled,In Progress,
+SYN-VULN-0290,2026-08-03,Corona SCA,OrchidBay Employee Workspace,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0256,2026-08-04,Corona SCA,WillowForge Document Exchange,Low,Temporary file exposure in utility dependency,In Progress,
+SYN-VULN-0278,2026-08-05,QWIET-SAST,AsterVale Customer Portal,Critical,Unsafe object deserialization,In Progress,
+SYN-VULN-0252,2026-08-06,QWIET-SAST,EmberHarbor Identity Service,Low,Overly broad error message,Resolved,2026-09-15
+SYN-VULN-0263,2026-08-06,Solis DAST,JuniperPeak Inventory Hub,Medium,Overly permissive CORS policy,Open,
+SYN-VULN-0261,2026-08-07,Corona SCA,JuniperPeak Inventory Hub,Critical,Remote code execution in logging dependency,In Progress,
+SYN-VULN-0240,2026-08-08,QWIET-SECRETS,EmberHarbor Identity Service,Medium,Development credential in configuration,In Progress,
+SYN-VULN-0286,2026-08-08,Corona SCA,JuniperPeak Inventory Hub,Low,Low-impact debug disclosure in dependency,Open,
+SYN-VULN-0267,2026-08-09,Solis DAST,AsterVale Customer Portal,Low,Missing Content-Security-Policy header,In Progress,
+SYN-VULN-0272,2026-08-09,QWIET-SAST,AsterVale Customer Portal,Medium,Missing authorization check,Open,
+SYN-VULN-0230,2026-08-10,Tenable,LumenField Analytics Gateway,Low,ICMP timestamp disclosure,In Progress,
+SYN-VULN-0264,2026-08-10,QWIET-SAST,AsterVale Customer Portal,Medium,Verbose exception disclosure,Open,
+SYN-VULN-0276,2026-08-10,QWIET-SAST,WillowForge Document Exchange,Low,Overly broad error message,Open,
+SYN-VULN-0266,2026-08-11,Tenable,AsterVale Customer Portal,High,Outdated SSH server package,In Progress,
+SYN-VULN-0257,2026-08-13,Tenable,OrchidBay Employee Workspace,High,Unsupported operating system release,In Progress,
+SYN-VULN-0283,2026-08-13,Tenable,WillowForge Document Exchange,Medium,Legacy TLS protocol enabled,Resolved,2026-09-21
+SYN-VULN-0287,2026-08-13,Corona SCA,WillowForge Document Exchange,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0227,2026-08-14,QWIET-SAST,EmberHarbor Identity Service,Critical,Unsafe object deserialization,In Progress,
+SYN-VULN-0226,2026-08-15,QWIET-SECRETS,LumenField Analytics Gateway,Medium,Development credential in configuration,Open,
+SYN-VULN-0233,2026-08-15,Tenable,SilverKite Order Service,High,Unsupported operating system release,Resolved,2026-08-24
+SYN-VULN-0244,2026-08-15,Solis DAST,JuniperPeak Inventory Hub,High,Server-side request forgery,In Progress,
+SYN-VULN-0232,2026-08-16,Solis DAST,JuniperPeak Inventory Hub,High,Server-side request forgery,Resolved,2026-09-12
+SYN-VULN-0269,2026-08-16,Solis DAST,AsterVale Customer Portal,Medium,Missing cross-site request forgery protection,In Progress,
+SYN-VULN-0229,2026-08-17,QWIET-SECRETS,LumenField Analytics Gateway,Critical,Production administrator credential in source,Open,
+SYN-VULN-0289,2026-08-17,Corona SCA,EmberHarbor Identity Service,Medium,Regular expression denial of service in parser,In Progress,
+SYN-VULN-0228,2026-08-21,QWIET-SAST,JuniperPeak Inventory Hub,Critical,Unsafe object deserialization,Open,
+SYN-VULN-0237,2026-08-21,Corona SCA,LumenField Analytics Gateway,Low,Temporary file exposure in utility dependency,Open,
+SYN-VULN-0246,2026-08-21,QWIET-SAST,AsterVale Customer Portal,Medium,Verbose exception disclosure,Open,
+SYN-VULN-0254,2026-08-21,Tenable,CedarBridge Payments API,High,Outdated SSH server package,In Progress,
+SYN-VULN-0255,2026-08-21,QWIET-SAST,LumenField Analytics Gateway,Medium,Verbose exception disclosure,In Progress,
+SYN-VULN-0260,2026-08-22,Corona SCA,EmberHarbor Identity Service,Medium,Information disclosure in archive dependency,Resolved,2026-09-09
+SYN-VULN-0273,2026-08-22,QWIET-SAST,CedarBridge Payments API,Medium,Verbose exception disclosure,In Progress,
+SYN-VULN-0280,2026-08-22,Tenable,AsterVale Customer Portal,Medium,Legacy TLS protocol enabled,Open,
+SYN-VULN-0231,2026-08-24,QWIET-SAST,AsterVale Customer Portal,Critical,SQL injection in account search,Resolved,2026-09-18
+SYN-VULN-0234,2026-08-25,QWIET-SAST,CedarBridge Payments API,High,Path traversal in file export,Open,
+SYN-VULN-0247,2026-08-25,Solis DAST,AsterVale Customer Portal,High,Server-side request forgery,Open,
+SYN-VULN-0275,2026-08-25,Tenable,OrchidBay Employee Workspace,High,Outdated SSH server package,Resolved,2026-09-24
+SYN-VULN-0282,2026-08-25,QWIET-SAST,SilverKite Order Service,High,Stored cross-site scripting,Open,
+SYN-VULN-0241,2026-08-26,Tenable,LumenField Analytics Gateway,Critical,Exposed unauthenticated management service,Open,
+SYN-VULN-0242,2026-08-26,Corona SCA,CedarBridge Payments API,Low,Low-impact debug disclosure in dependency,Open,
+SYN-VULN-0245,2026-08-26,QWIET-SECRETS,CedarBridge Payments API,Medium,Expired service token in test fixture,Open,
+SYN-VULN-0277,2026-08-26,Corona SCA,OrchidBay Employee Workspace,Critical,Remote code execution in logging dependency,In Progress,
+SYN-VULN-0279,2026-08-26,Corona SCA,SilverKite Order Service,Medium,Regular expression denial of service in parser,Open,
+SYN-VULN-0288,2026-08-26,Corona SCA,EmberHarbor Identity Service,High,Signature verification bypass in token library,In Progress,
+SYN-VULN-0284,2026-08-27,QWIET-SECRETS,WillowForge Document Exchange,Medium,Development credential in configuration,Resolved,2026-09-16
+SYN-VULN-0258,2026-08-28,QWIET-SECRETS,CedarBridge Payments API,Medium,Development credential in configuration,Open,
+SYN-VULN-0248,2026-08-29,QWIET-SECRETS,AsterVale Customer Portal,High,Database password in build script,Open,
+SYN-VULN-0265,2026-08-29,QWIET-SECRETS,CedarBridge Payments API,High,Service API token in source,In Progress,
+SYN-VULN-0243,2026-08-30,Corona SCA,AsterVale Customer Portal,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0271,2026-08-30,Tenable,EmberHarbor Identity Service,High,Outdated SSH server package,In Progress,
+SYN-VULN-0285,2026-08-30,Corona SCA,EmberHarbor Identity Service,Low,Temporary file exposure in utility dependency,Open,
+SYN-VULN-0249,2026-08-31,Solis DAST,EmberHarbor Identity Service,Medium,Overly permissive CORS policy,In Progress,
+SYN-VULN-0253,2026-08-31,Corona SCA,JuniperPeak Inventory Hub,Medium,Regular expression denial of service in parser,Resolved,2026-09-04
+SYN-VULN-0281,2026-08-31,QWIET-SECRETS,SilverKite Order Service,Low,Test-only credential in documentation,Resolved,2026-09-29
+SYN-VULN-0302,2026-09-01,Solis DAST,EmberHarbor Identity Service,High,Session fixation vulnerability,Open,
+SYN-VULN-0349,2026-09-02,Corona SCA,SilverKite Order Service,Low,Low-impact debug disclosure in dependency,Open,
+SYN-VULN-0294,2026-09-03,Corona SCA,CedarBridge Payments API,High,Signature verification bypass in token library,In Progress,
+SYN-VULN-0307,2026-09-03,QWIET-SAST,SilverKite Order Service,Medium,Missing authorization check,Open,
+SYN-VULN-0316,2026-09-03,Tenable,AsterVale Customer Portal,High,Unsupported operating system release,In Progress,
+SYN-VULN-0299,2026-09-04,Corona SCA,JuniperPeak Inventory Hub,Low,Low-impact debug disclosure in dependency,In Progress,
+SYN-VULN-0308,2026-09-04,Tenable,JuniperPeak Inventory Hub,Medium,Unnecessary network service exposed,In Progress,
+SYN-VULN-0306,2026-09-05,Corona SCA,OrchidBay Employee Workspace,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0343,2026-09-07,Corona SCA,AsterVale Customer Portal,High,Denial of service in HTTP dependency,Resolved,2026-10-05
+SYN-VULN-0313,2026-09-09,QWIET-SAST,SilverKite Order Service,Low,Internal path exposed in logs,Resolved,2026-09-26
+SYN-VULN-0314,2026-09-09,Corona SCA,OrchidBay Employee Workspace,Low,Low-impact debug disclosure in dependency,Open,
+SYN-VULN-0319,2026-09-09,QWIET-SAST,EmberHarbor Identity Service,Low,Overly broad error message,Resolved,2026-10-10
+SYN-VULN-0327,2026-09-09,Solis DAST,AsterVale Customer Portal,High,Server-side request forgery,Open,
+SYN-VULN-0331,2026-09-09,Solis DAST,JuniperPeak Inventory Hub,High,Session fixation vulnerability,Open,
+SYN-VULN-0340,2026-09-09,QWIET-SAST,EmberHarbor Identity Service,Low,Internal path exposed in logs,Resolved,2026-09-19
+SYN-VULN-0303,2026-09-10,Corona SCA,OrchidBay Employee Workspace,Critical,Unsafe deserialization in serialization library,Open,
+SYN-VULN-0304,2026-09-10,Corona SCA,OrchidBay Employee Workspace,Critical,Unsafe deserialization in serialization library,Open,
+SYN-VULN-0317,2026-09-11,QWIET-SAST,AsterVale Customer Portal,Low,Internal path exposed in logs,Open,
+SYN-VULN-0301,2026-09-12,Tenable,AsterVale Customer Portal,High,Unsupported operating system release,Resolved,2026-09-29
+SYN-VULN-0322,2026-09-12,Corona SCA,LumenField Analytics Gateway,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0326,2026-09-12,QWIET-SAST,LumenField Analytics Gateway,Low,Overly broad error message,Open,
+SYN-VULN-0315,2026-09-13,QWIET-SECRETS,CedarBridge Payments API,High,Database password in build script,Open,
+SYN-VULN-0298,2026-09-14,Solis DAST,EmberHarbor Identity Service,High,Session fixation vulnerability,Open,
+SYN-VULN-0332,2026-09-14,Solis DAST,CedarBridge Payments API,Low,Missing X-Content-Type-Options header,In Progress,
+SYN-VULN-0333,2026-09-14,Solis DAST,CedarBridge Payments API,Medium,Missing cross-site request forgery protection,Open,
+SYN-VULN-0336,2026-09-14,QWIET-SECRETS,AsterVale Customer Portal,Medium,Development credential in configuration,In Progress,
+SYN-VULN-0323,2026-09-15,Corona SCA,JuniperPeak Inventory Hub,High,Denial of service in HTTP dependency,Open,
+SYN-VULN-0295,2026-09-16,Corona SCA,CedarBridge Payments API,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0344,2026-09-16,QWIET-SECRETS,AsterVale Customer Portal,Low,Inactive sandbox token in example file,Open,
+SYN-VULN-0346,2026-09-16,Corona SCA,WillowForge Document Exchange,Medium,Information disclosure in archive dependency,Resolved,2026-10-01
+SYN-VULN-0334,2026-09-17,Corona SCA,OrchidBay Employee Workspace,High,Signature verification bypass in token library,Open,
+SYN-VULN-0292,2026-09-18,Tenable,SilverKite Order Service,Medium,Legacy TLS protocol enabled,In Progress,
+SYN-VULN-0311,2026-09-18,Corona SCA,CedarBridge Payments API,Critical,Remote code execution in logging dependency,In Progress,
+SYN-VULN-0339,2026-09-18,Tenable,SilverKite Order Service,Low,ICMP timestamp disclosure,Open,
+SYN-VULN-0347,2026-09-18,Tenable,JuniperPeak Inventory Hub,Low,ICMP timestamp disclosure,In Progress,
+SYN-VULN-0310,2026-09-19,Tenable,AsterVale Customer Portal,High,Unsupported operating system release,In Progress,
+SYN-VULN-0320,2026-09-19,Corona SCA,JuniperPeak Inventory Hub,Medium,Regular expression denial of service in parser,In Progress,
+SYN-VULN-0293,2026-09-20,Corona SCA,JuniperPeak Inventory Hub,Low,Low-impact debug disclosure in dependency,In Progress,
+SYN-VULN-0291,2026-09-23,Corona SCA,OrchidBay Employee Workspace,Medium,Information disclosure in archive dependency,Open,
+SYN-VULN-0318,2026-09-23,QWIET-SAST,AsterVale Customer Portal,High,Stored cross-site scripting,In Progress,
+SYN-VULN-0329,2026-09-23,Tenable,AsterVale Customer Portal,Medium,Unnecessary network service exposed,Resolved,2026-10-04
+SYN-VULN-0341,2026-09-23,Solis DAST,SilverKite Order Service,Low,Missing X-Content-Type-Options header,Open,
+SYN-VULN-0309,2026-09-24,Corona SCA,EmberHarbor Identity Service,Low,Low-impact debug disclosure in dependency,In Progress,
+SYN-VULN-0335,2026-09-24,Solis DAST,EmberHarbor Identity Service,High,Server-side request forgery,Open,
+SYN-VULN-0337,2026-09-25,Solis DAST,CedarBridge Payments API,Medium,Missing cross-site request forgery protection,Open,
+SYN-VULN-0350,2026-09-25,QWIET-SAST,EmberHarbor Identity Service,Low,Overly broad error message,In Progress,
+SYN-VULN-0321,2026-09-26,Corona SCA,OrchidBay Employee Workspace,Low,Low-impact debug disclosure in dependency,Open,
+SYN-VULN-0342,2026-09-26,QWIET-SECRETS,LumenField Analytics Gateway,Medium,Development credential in configuration,Resolved,2026-10-05
+SYN-VULN-0297,2026-09-27,Tenable,LumenField Analytics Gateway,High,Unsupported operating system release,In Progress,
+SYN-VULN-0300,2026-09-27,Tenable,EmberHarbor Identity Service,High,Unsupported operating system release,Open,
+SYN-VULN-0338,2026-09-27,Corona SCA,AsterVale Customer Portal,High,Denial of service in HTTP dependency,Open,
+SYN-VULN-0328,2026-09-28,Solis DAST,EmberHarbor Identity Service,Low,Missing X-Content-Type-Options header,Resolved,2026-10-06
+SYN-VULN-0348,2026-09-28,Corona SCA,AsterVale Customer Portal,Medium,Regular expression denial of service in parser,In Progress,
+SYN-VULN-0312,2026-09-29,QWIET-SECRETS,AsterVale Customer Portal,Medium,Development credential in configuration,Open,
+SYN-VULN-0324,2026-09-29,QWIET-SAST,WillowForge Document Exchange,Medium,Verbose exception disclosure,Open,
+SYN-VULN-0325,2026-09-29,Tenable,JuniperPeak Inventory Hub,Medium,Unnecessary network service exposed,Resolved,2026-10-04
+SYN-VULN-0330,2026-09-29,QWIET-SAST,OrchidBay Employee Workspace,Low,Internal path exposed in logs,Resolved,2026-10-06
+SYN-VULN-0296,2026-09-30,Solis DAST,JuniperPeak Inventory Hub,Medium,Missing cross-site request forgery protection,Open,
+SYN-VULN-0305,2026-09-30,Solis DAST,AsterVale Customer Portal,Medium,Overly permissive CORS policy,Resolved,2026-10-06
+SYN-VULN-0345,2026-09-30,QWIET-SAST,JuniperPeak Inventory Hub,Critical,Unsafe object deserialization,Resolved,2026-10-02
