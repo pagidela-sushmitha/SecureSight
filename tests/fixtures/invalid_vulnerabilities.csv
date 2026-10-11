@@ -1,0 +1,13 @@
+vulnerability_id,scan_date,tool,application,severity,vulnerability_name,status,resolved_date
+SYN-TEST-VALID-001,2026-03-01,QWIET-SAST,Fictional Cedar Portal,High,SQL injection,Open,
+SYN-TEST-VALID-002,2026-03-02,Tenable,Fictional Willow API,Medium,Legacy TLS protocol enabled,In Progress,
+SYN-TEST-VALID-003,2026-03-03,Solis DAST,Fictional Orchid Workspace,Low,Missing security header,Resolved,2026-03-05
+SYN-TEST-SEVERITY,2026-03-01,QWIET-SAST,Fictional Cedar Portal,Extreme,SQL injection,Open,
+SYN-TEST-STATUS,2026-03-01,Corona SCA,Fictional Willow API,High,Outdated dependency,Pending Review,
+,2026-03-01,QWIET-SECRETS,Fictional Orchid Workspace,High,Fictional credential exposure,Open,
+SYN-TEST-DATE,2026-02-30,Tenable,Fictional Willow API,Medium,Legacy TLS protocol enabled,Open,
+SYN-TEST-EARLY,2026-03-10,Solis DAST,Fictional Cedar Portal,High,Session fixation,Resolved,2026-03-09
+SYN-TEST-DUPLICATE,2026-03-01,QWIET-SAST,Fictional Cedar Portal,High,SQL injection,Open,
+SYN-TEST-DUPLICATE,2026-03-02,Corona SCA,Fictional Willow API,Medium,Outdated dependency,In Progress,
+SYN-TEST-MISSING-RESOLUTION,2026-03-01,Tenable,Fictional Willow API,High,Outdated SSH server package,Resolved,
+SYN-TEST-OPEN-RESOLUTION,2026-03-01,Solis DAST,Fictional Orchid Workspace,Low,Missing security header,Open,2026-03-02
