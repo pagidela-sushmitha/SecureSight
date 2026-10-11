@@ -13,6 +13,7 @@ from src.analytics import (
 )
 from src.data_loader import load_and_validate_csv
 from src.remediation import get_guidance
+from src.chat_workspace import render_chat, sync_chat_scope
 
 
 DATA_PATH = Path(__file__).resolve().parent / "data" / "vulnerabilities.csv"
@@ -210,7 +211,7 @@ def main():
     st.title("SecureSight")
     st.caption("AI-Powered Vulnerability Intelligence & Analytics · Synthetic test data only. These records are not real security findings.")
     st.sidebar.markdown("## SecureSight")
-    navigation = st.sidebar.radio("Workspace", ("Security Overview", "Vulnerability Intelligence"), key="navigation")
+    navigation = st.sidebar.radio("Workspace", ("Security Overview", "Vulnerability Intelligence", "Ask SecureSight AI"), key="navigation")
     records, report = load_and_validate_csv(DATA_PATH)
     if not records:
         render_validation(report, 0)
@@ -222,11 +223,14 @@ def main():
     if filters is None:
         return
     filtered = filter_findings(frame, filters)
+    sync_chat_scope(st.session_state, filtered, filters)
     st.sidebar.caption(f"{len(filtered)} of {len(frame)} validated findings in discovery cohort")
     if navigation == "Security Overview":
         render_overview(filtered)
-    else:
+    elif navigation == "Vulnerability Intelligence":
         render_intelligence(filtered)
+    else:
+        render_chat(filtered)
 
 
 if __name__ == "__main__":
