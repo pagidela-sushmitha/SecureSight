@@ -8,10 +8,10 @@ from pathlib import Path
 import pandas as pd
 from pydantic import ValidationError
 
-from src.models import VulnerabilityRecord
+from src.models import ORIGINAL_COLUMNS, VulnerabilityRecord
 
 
-REQUIRED_COLUMNS = tuple(VulnerabilityRecord.model_fields)
+REQUIRED_COLUMNS = ORIGINAL_COLUMNS
 
 
 @dataclass(frozen=True)
@@ -43,7 +43,8 @@ def load_and_validate_csv(path: str | Path) -> tuple[list[VulnerabilityRecord], 
 
     csv.reader preserves physical row numbers and catches malformed row widths;
     pandas holds the parsed text without inferring numbers, dates, or NA values.
-    Extra columns are ignored. Missing or duplicate headers are file errors.
+    Unknown columns are ignored; supplied metadata fields are validated too.
+    Missing required or duplicate headers are file errors.
     All occurrences of duplicate IDs are excluded, even if a duplicate has other
     validation errors. A structurally corrupt CSV is rejected as a whole because
     its remaining record boundaries cannot be trusted.
@@ -94,8 +95,9 @@ def load_and_validate_csv(path: str | Path) -> tuple[list[VulnerabilityRecord], 
         row_numbers.append(row_number)
 
     frame = pd.DataFrame(shaped_rows, columns=header, dtype=str)
+    validated_columns = [name for name in header if name in VulnerabilityRecord.model_fields]
     valid_records = []
-    for row_number, values in zip(row_numbers, frame.loc[:, list(REQUIRED_COLUMNS)].to_dict(orient="records")):
+    for row_number, values in zip(row_numbers, frame.loc[:, validated_columns].to_dict(orient="records")):
         try:
             record = VulnerabilityRecord.model_validate(values)
         except ValidationError as exc:

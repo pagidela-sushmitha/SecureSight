@@ -2,15 +2,23 @@
 
 import calendar
 import csv
+import hashlib
 import random
+import sys
 from collections import Counter
 from datetime import date, timedelta
 from pathlib import Path
 
+# Support the documented `python scripts/generate_synthetic_data.py` invocation.
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+
+from src.remediation import get_guidance
+
 
 SEED = 20261011
 OUTPUT = Path(__file__).resolve().parents[1] / "data" / "vulnerabilities.csv"
-COLUMNS = (
+ORIGINAL_COLUMNS = (
     "vulnerability_id",
     "scan_date",
     "tool",
@@ -20,6 +28,11 @@ COLUMNS = (
     "status",
     "resolved_date",
 )
+METADATA_COLUMNS = (
+    "affected_component", "cwe_id", "description", "remediation", "risk_score",
+    "file_path", "line_number", "affected_asset",
+)
+COLUMNS = ORIGINAL_COLUMNS + METADATA_COLUMNS
 # These fictional examples describe finding types, never real credentials or assets.
 FINDINGS = {
     "QWIET-SAST": {
@@ -70,6 +83,27 @@ MONTHLY_COUNTS = ((3, 35), (4, 40), (5, 45), (6, 50), (7, 55), (8, 65), (9, 60))
 SNAPSHOT_DATE = date(2026, 10, 10)
 
 
+def synthetic_metadata(record):
+    """Derive metadata from the ID without consuming the original random stream."""
+    fingerprint = int(hashlib.sha256(record["vulnerability_id"].encode()).hexdigest()[:12], 16)
+    guidance = get_guidance(record["vulnerability_name"], record["tool"])
+    # Tenths on a synthetic 0–10 scale, not CVSS or an exploitability estimate.
+    low, high = {"Critical": (90, 100), "High": (70, 89), "Medium": (40, 69), "Low": (1, 39)}[record["severity"]]
+    risk = (low + fingerprint % (high - low + 1)) / 10
+    slug = record["application"].lower().replace(" ", "-")
+    has_source = record["tool"] in ("QWIET-SAST", "QWIET-SECRETS")
+    return {
+        "affected_component": guidance.component,
+        "cwe_id": guidance.cwe_id,
+        "description": f"Synthetic example: {guidance.description} No actual scan was performed.",
+        "remediation": guidance.remediation,
+        "risk_score": f"{risk:.1f}",
+        "file_path": f"synthetic/{slug}/src/{guidance.component}.py" if has_source else "",
+        "line_number": str(10 + fingerprint % 390) if has_source else "",
+        "affected_asset": f"host-{1 + fingerprint % 9}.{slug}.example" if record["tool"] == "Tenable" else "",
+    }
+
+
 def generate_records():
     """Use a local fixed seed and fixed dates, independent of the run date."""
     rng = random.Random(SEED)
@@ -98,6 +132,8 @@ def generate_records():
                 "status": status,
                 "resolved_date": resolved,
             })
+    for record in records:
+        record.update(synthetic_metadata(record))
     return sorted(records, key=lambda record: (record["scan_date"], record["vulnerability_id"]))
 
 
@@ -111,7 +147,8 @@ def verify_csv(path):
     if len(records) != 350 or len({row["vulnerability_id"] for row in records}) != 350:
         raise ValueError("Expected exactly 350 records with unique IDs")
     for row in records:
-        if set(row) != set(COLUMNS) or any(row[column] in (None, "") for column in COLUMNS[:-1]):
+        required = ORIGINAL_COLUMNS[:-1] + METADATA_COLUMNS[:5]
+        if set(row) != set(COLUMNS) or any(row[column] in (None, "") for column in required):
             raise ValueError("Missing or extra CSV fields")
         if not row["vulnerability_id"].startswith("SYN-VULN-"):
             raise ValueError("Missing synthetic ID prefix")
@@ -128,6 +165,8 @@ def verify_csv(path):
                 raise ValueError("Invalid resolution date")
         elif row["resolved_date"] != "":
             raise ValueError("Unresolved findings must have a blank resolved_date")
+        if {name: row[name] for name in METADATA_COLUMNS} != synthetic_metadata(row):
+            raise ValueError("Synthetic metadata does not match deterministic generation")
     for column, expected in (("tool", FINDINGS), ("severity", SEVERITIES), ("status", STATUSES), ("application", APPLICATIONS)):
         if {row[column] for row in records} != set(expected):
             raise ValueError(f"Missing variation in {column}")

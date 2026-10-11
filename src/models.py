@@ -4,10 +4,18 @@ import re
 from datetime import date
 from typing import Annotated, Literal
 
-from pydantic import BaseModel, ConfigDict, StringConstraints, ValidationInfo, field_validator
+from pydantic import BaseModel, ConfigDict, Field, StringConstraints, ValidationInfo, field_validator, model_validator
 
 
 NonEmptyText = Annotated[str, StringConstraints(strip_whitespace=True, min_length=1)]
+ORIGINAL_COLUMNS = (
+    "vulnerability_id", "scan_date", "tool", "application", "severity",
+    "vulnerability_name", "status", "resolved_date",
+)
+METADATA_COLUMNS = (
+    "affected_component", "cwe_id", "description", "remediation", "risk_score",
+    "file_path", "line_number", "affected_asset",
+)
 
 
 class VulnerabilityRecord(BaseModel):
@@ -23,6 +31,33 @@ class VulnerabilityRecord(BaseModel):
     vulnerability_name: NonEmptyText
     status: Literal["Open", "In Progress", "Resolved"]
     resolved_date: date | None = None
+    # Optional for legacy eight-column CSVs; validated whenever supplied.
+    affected_component: NonEmptyText | None = None
+    cwe_id: Annotated[str, StringConstraints(pattern=r"^CWE-[1-9][0-9]*$")] | None = None
+    description: NonEmptyText | None = None
+    remediation: NonEmptyText | None = None
+    risk_score: float | None = Field(default=None, ge=0, le=10, allow_inf_nan=False)
+    file_path: NonEmptyText | None = None
+    line_number: int | None = Field(default=None, gt=0)
+    affected_asset: NonEmptyText | None = None
+
+    @field_validator(*METADATA_COLUMNS, mode="before")
+    @classmethod
+    def blank_metadata(cls, value):
+        return None if value == "" else value
+
+    @field_validator("file_path")
+    @classmethod
+    def source_location_applicability(cls, value, info: ValidationInfo):
+        if value is not None and info.data.get("tool") not in ("QWIET-SAST", "QWIET-SECRETS"):
+            raise ValueError("Source locations apply only to SAST or secret findings")
+        return value
+
+    @model_validator(mode="after")
+    def paired_source_location(self):
+        if (self.file_path is None) != (self.line_number is None):
+            raise ValueError("file_path and line_number must be provided together")
+        return self
 
     @field_validator("scan_date", "resolved_date", mode="before")
     @classmethod
