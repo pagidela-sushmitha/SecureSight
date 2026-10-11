@@ -32,9 +32,19 @@ def reset_filters(start, end):
         st.session_state[key] = []
     st.session_state["scan_range"] = (start, end)
     st.session_state["finding_search"] = ""
-    st.session_state["finding_mode"] = "All Findings"
+    st.session_state["finding_priority_only"] = False
     st.session_state["finding_sort"] = next(iter(SORT_OPTIONS))
+    st.session_state["finding_normal_sort"] = next(iter(SORT_OPTIONS))
     st.session_state["finding_id"] = None
+
+
+def toggle_priority_findings():
+    """Start priority review by risk; restore the user's normal sort on exit."""
+    if st.session_state["finding_priority_only"]:
+        st.session_state["finding_normal_sort"] = st.session_state.get("finding_sort", next(iter(SORT_OPTIONS)))
+        st.session_state["finding_sort"] = "Risk · highest first"
+    else:
+        st.session_state["finding_sort"] = st.session_state.get("finding_normal_sort", next(iter(SORT_OPTIONS)))
 
 
 def render_validation(report, valid_count):
@@ -173,19 +183,21 @@ def render_finding_detail(row):
 
 def render_intelligence(frame):
     st.subheader("Vulnerability Intelligence")
-    st.session_state.setdefault("finding_mode", "All Findings")
-    mode = st.segmented_control("Findings view", ("All Findings", "Priority Remediation"), required=True, key="finding_mode", persist_state="session")
-    st.caption("Priority Remediation includes unresolved Critical and High findings. Default ordering is highest synthetic risk first.")
+    priority = st.checkbox("Priority findings only", key="finding_priority_only", on_change=toggle_priority_findings,
+                           persist_state="session", help="Show only Critical/High findings with Open or In Progress status. Enabling starts with highest synthetic risk; disabling restores your previous normal sort.")
     search_column, sort_column = st.columns([2, 1])
     query = search_column.text_input("Search findings", placeholder="Search by ID or vulnerability name", key="finding_search", persist_state="session")
     sort = sort_column.selectbox("Sort findings", list(SORT_OPTIONS), key="finding_sort", persist_state="session")
-    findings = explore_findings(frame, priority=mode == "Priority Remediation", query=query, sort=sort)
-    st.caption("KPIs and export reflect this view, including global filters, view mode, and search.")
-    render_kpis(findings)
+    findings = explore_findings(frame, priority=priority, query=query, sort=sort)
+    st.markdown(f"**{len(findings)} {'priority findings' if priority else 'matching findings'}**")
+    st.caption(f"{len(frame)} findings in global analysis scope · Priority findings are Critical/High with Open or In Progress status. Local controls affect only this table and CSV export; Overview and AI use global scope.")
+    ids = findings["vulnerability_id"].tolist()
+    if st.session_state.get("finding_id") not in (None, *ids):
+        st.session_state["finding_id"] = None
+        st.caption("The previously selected finding is outside this view. Select a matching finding.")
     if findings.empty:
-        st.info("No findings match this view. Clear the search, change view mode, or use Reset Filters.")
+        st.info("No findings match this view. Clear the search, uncheck Priority findings only, or use Reset Filters.")
         return
-    st.caption(f"{len(findings)} findings · Click a column header to sort the table; use the selector below to inspect a finding.")
     st.dataframe(findings.loc[:, list(TABLE_COLUMNS)], hide_index=True,
                  height=min(360, 38 + 35 * len(findings)), width="stretch", key="findings_table",
                  column_config={
@@ -196,10 +208,6 @@ def render_intelligence(frame):
                      "risk_score": st.column_config.NumberColumn("Risk / 10", width="small", format="%.1f", help="Synthetic 0–10 scale; not CVSS"),
                  })
     st.download_button("Download filtered findings (CSV)", findings_csv(findings), file_name="securesight-synthetic-findings.csv", mime="text/csv", on_click="ignore", key="download_findings")
-    ids = findings["vulnerability_id"].tolist()
-    if st.session_state.get("finding_id") not in (None, *ids):
-        st.session_state["finding_id"] = None
-        st.caption("The previously selected finding is outside this view. Select a matching finding.")
     names = findings.set_index("vulnerability_id")["vulnerability_name"].to_dict()
     selected = st.selectbox("Inspect vulnerability", ids, index=None, placeholder="Select a finding for details", key="finding_id", format_func=lambda item: f"{item} · {names[item]}", persist_state="session")
     if selected is not None:

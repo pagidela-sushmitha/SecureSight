@@ -18,12 +18,23 @@ defines an inclusive discovery cohort; monthly resolution events use that same
 cohort's resolution dates, which may extend beyond the scan interval.
 
 The overview shows six KPIs and five interactive Plotly charts. Intelligence
-supports **All Findings** and **Priority Remediation** (unresolved Critical/High),
-literal ID/name search, sorting, CSV download, and finding details. Its KPIs and
-download reflect the current filters, mode, and search. The sort dropdown sets
+uses one findings table with an optional **Priority findings only** checkbox
+(unchecked by default). It restricts the table to Critical/High findings with
+Open or In Progress status, within the global scope. Literal ID/name search,
+sorting, CSV download, and finding details use this same table scope. A compact
+local summary shows the matching count (350 matching findings or 76 priority
+findings with default filters and no search), including zero for empty results.
+A secondary label identifies the global analysis scope. Executive KPI cards
+appear only in Security Overview. Those KPIs, all Overview charts, and AI
+analysis use global filters only; local checkbox/search changes do not affect
+them or AI history.
+Enabling the checkbox starts with highest synthetic risk and an ID tie-breaker;
+users can then change sorting. Disabling restores the previous normal sort.
+Checkbox and sorting selections persist across reruns and navigation. The sort dropdown sets
 export ordering; clicking table headers sorts only the displayed table.
-**Reset Filters** restores all records and clears intelligence search, mode,
-sort, and finding selection. Validation diagnostics remain in the sidebar.
+**Reset Filters** restores all records and also unchecks the local priority
+checkbox, clears intelligence search and finding selection, and resets sorting
+to highest synthetic risk. Validation diagnostics remain in the sidebar.
 
 ## Verify
 
@@ -136,7 +147,7 @@ Manual acceptance questions, after **Reset Filters**:
 
 Repeat after narrowing scanner, severity, application, status, and discovery dates.
 Check that history clears and scope counts match the overview. Compare top IDs
-with Intelligence's Priority Remediation view and highest-risk sort. Compare
+with Intelligence's **Priority findings only** checkbox and highest-risk sort. Compare
 recommendations with the selected finding details. Select a combination with no
 findings and verify the disabled chat and empty-state message. Navigate away and
 back without changing filters to verify history persists. Clear Chat should clear
